@@ -25,7 +25,7 @@ const Landing = () => {
       </div>
 
       <div className="right">
-        <img src="vote.gif" />
+        <img src="https://i.pinimg.com/originals/c4/d8/d7/c4d8d7f9e12230e974cb918678b161b4.gif" />
       </div>
     </div>
   );

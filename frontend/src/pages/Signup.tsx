@@ -72,7 +72,7 @@ const Signup = (): JSX.Element => {
                   <input
                     id="citizenshipNumber"
                     type="text"
-                    placeholder="Citizenship Number"
+                    placeholder="Aadhar No."
                     {...getFieldProps("citizenshipNumber")}
                   />
                   <div className="form-error-text">

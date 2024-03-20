@@ -45,7 +45,9 @@ const Users = () => {
     setUser(newList);
   };
 
-  if (users.length === 0) return <div></div>;
+  if (users.length === 0) return <div style={{ color: '#804daa', fontSize:"2em" }}>
+    No users left to verify at the moment.
+  </div>;
 
   return (
     <div className="users-wrapper">

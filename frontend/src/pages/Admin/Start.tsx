@@ -73,6 +73,7 @@ const Start = () => {
       >
         {({ errors, touched, getFieldProps, handleSubmit }) => (
           <form onSubmit={handleSubmit}>
+            <h1 style={{ color: '#804daa' }}>Create New Poll</h1>
             <div className="input-container">
               <input
                 id="name"

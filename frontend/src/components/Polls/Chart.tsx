@@ -64,6 +64,16 @@ const Chart = (props: ChartProps) => {
     return total;
   };
 
+  const winner = () => {
+    let win=0;
+    for(let i=0;i<votes.length;i++){
+      if(votes>win){
+        win=votes;
+      }
+    }
+    return win;
+  }
+
   const getBars = () => {
     const bars = [];
     const total = getTotal();
