@@ -25,6 +25,7 @@ const Signup = (): JSX.Element => {
     <div>
       <LoginLayout error={error} success={success}>
         <div className="form-container">
+        <p>Sign Up</p>
           <Formik
             initialValues={{
               name: "",
@@ -72,7 +73,7 @@ const Signup = (): JSX.Element => {
                   <input
                     id="citizenshipNumber"
                     type="text"
-                    placeholder="Aadhar No."
+                    placeholder="Student ID No."
                     {...getFieldProps("citizenshipNumber")}
                   />
                   <div className="form-error-text">

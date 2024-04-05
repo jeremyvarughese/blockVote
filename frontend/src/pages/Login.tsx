@@ -21,7 +21,9 @@ const Login = (props: RouteProps): JSX.Element => {
   return (
     <div>
       <LoginLayout error={error}>
+        
         <div className="form-container">
+        <p>Login</p>
           <Formik
             initialValues={{
               email: "",
@@ -44,6 +46,7 @@ const Login = (props: RouteProps): JSX.Element => {
           >
             {({ errors, touched, getFieldProps, handleSubmit }) => (
               <form onSubmit={handleSubmit}>
+                
                 <div className="input-container">
                   <input
                     id="email"
