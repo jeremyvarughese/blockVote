@@ -1,24 +1,27 @@
 .profile-wrapper {
   @include box-shadow;
-  padding: 50px;
-  display: grid;
-  border-radius: 10px;
-  box-sizing: border-box;
-  grid-template-columns: 1fr 2fr;
-  column-gap: 100px;
+  // padding: 100px;
+  // display: grid;
+  // border-radius: 10px;
+  // box-sizing: border-box;
+  // grid-template-columns: 1fr 2fr;
+  // column-gap: 100px;
+  // align-self: center;
+  padding-top: 12em;
 
   .left-panel {
     text-align: center;
 
     .person-icon {
       * {
-        font-size: 4rem;
+        font-size: 6rem;
         color: $theme-primary;
       }
     }
 
     .username {
       padding: 20px 0 20px 0;
+      font-size: 2em;
     }
   }
 

@@ -32,6 +32,7 @@ const View = (props: RouteProps): JSX.Element => {
   if (status === "finished") comp = <Result />;
   if (status === "running") comp = <Polls />;
   if (status === "not-started") comp = <Start />;
+  console.log(status);
 
   return (
     <div className="view-container">

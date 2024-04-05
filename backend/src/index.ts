@@ -2,7 +2,7 @@ import { createConnection } from "typeorm";
 import app from "./server";
 import "dotenv/config";
 
-const port = process.env.PORT || 8001;
+const port = process.env.PORT || 8000;
 
 createConnection()
   .then(async (connection) => {

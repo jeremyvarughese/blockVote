@@ -24,12 +24,12 @@ export default () => {
       const adminMenu = [
         { name: "Home", link: "/" },
         { name: "Verify Users", link: "/users" },
-        { name: "Profile", link: "/profile" },
+        { name: "Logout", link: "/profile" },
       ];
 
       const userMenu = [
         { name: "Polls", link: "/" },
-        { name: "Profile", link: "/profile" },
+        { name: "Logout", link: "/profile" },
       ];
 
       if (authContext.isAdmin) {

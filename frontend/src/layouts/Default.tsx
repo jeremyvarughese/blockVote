@@ -1,6 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { useNavigate } from "react-router";
 import { useLocation } from "react-router-dom";
+import { AuthContext } from "../contexts/Auth";
+
+
 
 type MenuLink = {
   name: string;
@@ -43,8 +46,9 @@ const Default = (props: DefaultProps) => {
     document.getElementById("default-sidebar")?.classList.toggle("hide");
     document.getElementById("default-sidebar")?.classList.toggle("display");
   };
-
+  const authContext = useContext(AuthContext);
   return (
+    
     <div className="default-container">
       <div className="default-sidebar-container">
         <div onClick={toggleHandler} id="outside-ham" className="hamburger">
@@ -60,11 +64,16 @@ const Default = (props: DefaultProps) => {
             <div
               key={index}
               onClick={() => {
+                if(name === "Logout") {
+                  authContext.logout()
+                }
+                else{
                 toggleHandler();
                 navigate(link);
+                }
               }}
               className={`default-sidebar-link ${
-                pathname == link ? "active" : ""
+                pathname === link ? "active" : ""
               }`}
             >
               {name}
