@@ -23,7 +23,7 @@ const Login = (props: RouteProps): JSX.Element => {
       <LoginLayout error={error}>
         
         <div className="form-container">
-        <p>Login</p>
+        <p className="login-text"><u>Login</u></p>
           <Formik
             initialValues={{
               email: "",

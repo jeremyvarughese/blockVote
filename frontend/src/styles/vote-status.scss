@@ -4,7 +4,7 @@
   }
 
   50% {
-    opacity: 0;
+    opacity: 0.2;
   }
 
   100% {
@@ -14,21 +14,26 @@
 
 .vote-status-wrapper {
   position: absolute;
-  left: 20px;
-  top: 20px;
+  left: 50px;
+  top: 100px;
+  
 
   .running {
     width: 20px;
     height: 20px;
-    background-color: $theme-primary;
+    background-color: rgba(255, 0, 0, 0.421);
     border-radius: 100px;
-    animation: blink 1s linear infinite;
+    animation: blink 0.8s linear infinite;
+    margin-left: 50;
   }
 
   .finished {
+    top: 300;
+    padding-top: 200;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: $theme-primary;
+    color: rgb(0, 0, 0);
+    animation: blink 4s linear infinite;
   }
 }

@@ -64,11 +64,14 @@ const Chart = (props: ChartProps) => {
     return total;
   };
 
-  const winner = () => {
-    let win=0;
-    for(let i=0;i<votes.length;i++){
-      if(votes>win){
-        win=votes;
+  const getWinner = () => {
+    let win = 0;
+    
+    for (const name in votes) {
+      let win = 0;
+      let total = getTotal();
+      if(total > win) {
+        win = total
       }
     }
     return win;
@@ -91,9 +94,10 @@ const Chart = (props: ChartProps) => {
               justifyContent: "flex-end",
               alignItems: "center",
               color: "white",
-              backgroundColor: "rgb(77, 170, 167)",
+              backgroundColor: "#223544",
               paddingBottom: 10,
               paddingTop: 10,
+      
             }}
           >
             {votes[name]}

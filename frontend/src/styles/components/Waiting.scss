@@ -7,19 +7,61 @@
   }
 }
 
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.waiting {
+
+
+
+.title-small{
+
+  color: rgb(0, 0, 0);
+  font-style: oblique;
+  // height: 100;
+  // border-radius: 20;
+  // border: 10;
+  // justify-content: center;
+  // padding-bottom: 200;
+  
+
+}
+
 .waiting-wrapper {
-  display: flex;
+  display:flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  
+  
+
+  
 
   .cog {
     animation: rotate360 3s linear infinite;
 
     * {
-      font-size: 20rem;
-      color: $theme-primary;
-      padding-top: 18px;
-      margin: 0;
+      font-size: 15rem;
+      color: $theme-secondary;
+      padding-top: 20px;
+      
+      
     }
   }
+
+  
+
+  
+}
 }

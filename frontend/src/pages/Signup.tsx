@@ -25,7 +25,7 @@ const Signup = (): JSX.Element => {
     <div>
       <LoginLayout error={error} success={success}>
         <div className="form-container">
-        <p>Sign Up</p>
+        <p className="login-text"><u>Sign up</u></p>
           <Formik
             initialValues={{
               name: "",
