@@ -157,7 +157,7 @@ contract Election {
 
     function getStatus() public view returns (string memory) {
         if (started == true && ended == true) {
-            return "1";
+            return "finished";
         }
 
         if (started == true && ended == false) {

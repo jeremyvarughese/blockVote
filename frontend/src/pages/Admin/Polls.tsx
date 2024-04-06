@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "../../axios";
 import Chart from "../../components/Polls/Chart";
 import Panel from "../../components/Polls/Panel";
+import * as vscode from 'vscode';
 
 const Polls = () => {
   const [loading, setLoading] = useState(true);
@@ -14,7 +15,8 @@ const Polls = () => {
     });
   }, []);
 
-  const endElection = () => {
+  const endElection = async () => {
+
     axios
       .post("/polls/end")
       .then((_) => window.location.reload())

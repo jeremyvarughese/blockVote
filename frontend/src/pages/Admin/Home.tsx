@@ -26,7 +26,6 @@ const Home = (props: RouteProps): JSX.Element => {
 
   if (status === "finished") return <ResultPage />;
   if (status === "running") return <PollsPage />;
-
   return <StartPage />;
 };
 

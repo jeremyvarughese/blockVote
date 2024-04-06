@@ -16,6 +16,7 @@ app.use("/polls", pollsRouter);
 app.use("/users", usersRouter);
 
 app.get("/", (req: Request, res: Response) => {
+  
   console.log(req.cookies);
   res.status(404).send("no link matched!");
 });
