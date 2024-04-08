@@ -46,7 +46,9 @@ const Chart = (props: ChartProps) => {
     for (const name in votes) {
       names.push(
         <div key={name} className="name-wrapper text-normal">
+          <b>
           {name}
+          </b>
         </div>
       );
     }

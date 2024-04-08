@@ -24,9 +24,12 @@
 
   .button-wrapper {
     margin-top: 20px;
-    // width: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
+     width: 55px;
+    margin-left: 75px;
+    margin-right: 75px;
+    background-color:rgb(70, 7, 7);
+    color: white;
+
   }
 }
 
@@ -42,5 +45,6 @@
     margin-left: 60px;
     margin-right: 60px;
     border-radius: 20px;
+    font-size: large;
   }
 }
