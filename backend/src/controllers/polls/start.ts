@@ -7,11 +7,11 @@ import { Poll } from "../../entity/Poll";
 const schema = yup.object({
   body: yup.object({
     name: yup.string().min(3).required(),
-    description: yup.string().min(10).required(),
+    description: yup.string().min(5).required(),
     candidates: yup.array(
       yup.object({
         name: yup.string().min(3),
-        info: yup.string().min(10),
+        info: yup.string().min(5),
       })
     ),
   }),

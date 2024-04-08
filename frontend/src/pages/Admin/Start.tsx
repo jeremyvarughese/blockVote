@@ -110,6 +110,8 @@ const Start = () => {
                 {...getFieldProps("description")}
               />
 
+              
+
               <div className="form-error-text">
                 {touched.description && errors.description
                   ? errors.description
@@ -149,6 +151,7 @@ const Start = () => {
                     setName(e.target.value);
                   }}
                 />
+                
 
                 <button
                   className=""
@@ -177,6 +180,7 @@ const Start = () => {
                     setInfo(e.target.value);
                   }}
                 />
+                
               </div>
             </div>
 
