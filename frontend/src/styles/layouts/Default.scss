@@ -38,8 +38,13 @@
   }
 
   .default-content {
+    background-image: url(https://media.cdn.kaufland.de/product-images/original/7834a52e37e55f3f8d2316d467d60a45.jpg);
     flex: 1;
     padding-right: 100px;
+    padding-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
+    border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
