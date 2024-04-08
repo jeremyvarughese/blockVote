@@ -7,7 +7,7 @@ const Home = (props: RouteProps): JSX.Element => {
   return (
     <>
       <Landing />
-      <Features />
+      {/* <Features /> */}
     </>
   );
 };

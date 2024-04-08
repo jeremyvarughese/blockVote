@@ -103,7 +103,7 @@ const Start = () => {
             </div>
 
             {candidates.length !== 0 ? (
-              <div className="input-container">
+              <div className="candidates-container">
                 {candidates.map(({ name, info }, index) => (
                   <div key={index} className="candidate-wrapper">
                     <span>{name}</span>

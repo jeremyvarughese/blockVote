@@ -10,7 +10,7 @@ const App = () => {
       <AuthProvider>
         <CustomRoutes />
       </AuthProvider>
-      {/* <Footer /> */}
+      <Footer />
     </BrowserRouter>
   );
 };
