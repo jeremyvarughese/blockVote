@@ -1,0 +1,173 @@
+[
+    {
+      "id": 9,
+      "name": "John Smith",
+      "citizenshipNumber": "1234567890",
+      "email": "johnsmith1@gmail.com",
+      "password": "johnsmith1@gmail.com",
+      "admin": "0",
+      "verified": "1"
+    },
+    {
+      "id": 10,
+      "name": "Emily Johnson",
+      "citizenshipNumber": "0987654321",
+      "email": "emilyjohnson2@gmail.com",
+      "password": "emilyjohnson2@gmail.com",
+      "admin": "0",
+      "verified": "0"
+    },
+    {
+      "id": 11,
+      "name": "Michael Williams",
+      "citizenshipNumber": "2468013579",
+      "email": "michaelwilliams3@gmail.com",
+      "password": "michaelwilliams3@gmail.com",
+      "admin": "0",
+      "verified": "1"
+    },
+    {
+      "id": 12,
+      "name": "Sophia Brown",
+      "citizenshipNumber": "1357924680",
+      "email": "sophiabrown4@gmail.com",
+      "password": "sophiabrown4@gmail.com",
+      "admin": "0",
+      "verified": "0"
+    },
+    {
+      "id": 13,
+      "name": "William Jones",
+      "citizenshipNumber": "9876543210",
+      "email": "williamjones5@gmail.com",
+      "password": "williamjones5@gmail.com",
+      "admin": "0",
+      "verified": "1"
+    },
+    {
+      "id": 14,
+      "name": "Olivia Davis",
+      "citizenshipNumber": "5678901234",
+      "email": "oliviadavis6@gmail.com",
+      "password": "oliviadavis6@gmail.com",
+      "admin": "0",
+      "verified": "0"
+    },
+    {
+      "id": 15,
+      "name": "James Miller",
+      "citizenshipNumber": "4567890123",
+      "email": "jamesmiller7@gmail.com",
+      "password": "jamesmiller7@gmail.com",
+      "admin": "0",
+      "verified": "1"
+    },
+    {
+      "id": 16,
+      "name": "Amelia Wilson",
+      "citizenshipNumber": "9870123456",
+      "email": "ameliawilson8@gmail.com",
+      "password": "ameliawilson8@gmail.com",
+      "admin": "0",
+      "verified": "0"
+    },
+    {
+      "id": 17,
+      "name": "Ethan Taylor",
+      "citizenshipNumber": "6543217890",
+      "email": "ethantaylor9@gmail.com",
+      "password": "ethantaylor9@gmail.com",
+      "admin": "0",
+      "verified": "1"
+    },
+    {
+      "id": 18,
+      "name": "Ava Anderson",
+      "citizenshipNumber": "7890123456",
+      "email": "avaanderson10@gmail.com",
+      "password": "avaanderson10@gmail.com",
+      "admin": "0",
+      "verified": "0"
+    },
+    {
+      "id": 19,
+      "name": "Alexander Thomas",
+      "citizenshipNumber": "2109876543",
+      "email": "alexanderthomas11@gmail.com",
+      "password": "alexanderthomas11@gmail.com",
+      "admin": "0",
+      "verified": "1"
+    },
+    {
+      "id": 20,
+      "name": "Mia Jackson",
+      "citizenshipNumber": "5432109876",
+      "email": "miajackson12@gmail.com",
+      "password": "miajackson12@gmail.com",
+      "admin": "0",
+      "verified": "0"
+    },
+    {
+      "id": 21,
+      "name": "Benjamin White",
+      "citizenshipNumber": "9871236540",
+      "email": "benjaminwhite13@gmail.com",
+      "password": "benjaminwhite13@gmail.com",
+      "admin": "0",
+      "verified": "1"
+    },
+    {
+      "id": 22,
+      "name": "Charlotte Harris",
+      "citizenshipNumber": "3216549870",
+      "email": "charlotteharris14@gmail.com",
+      "password": "charlotteharris14@gmail.com",
+      "admin": "0",
+      "verified": "0"
+    },
+    {
+      "id": 23,
+      "name": "Logan Martin",
+      "citizenshipNumber": "7418529630",
+      "email": "loganmartin15@gmail.com",
+      "password": "loganmartin15@gmail.com",
+      "admin": "0",
+      "verified": "1"
+    },
+    {
+      "id": 24,
+      "name": "Liam Thompson",
+      "citizenshipNumber": "9638527410",
+      "email": "liamthompson16@gmail.com",
+      "password": "liamthompson16@gmail.com",
+      "admin": "0",
+      "verified": "0"
+    },
+    {
+      "id": 25,
+      "name": "Harper Garcia",
+      "citizenshipNumber": "8527419630",
+      "email": "harpergarcia17@gmail.com",
+      "password": "harpergarcia17@gmail.com",
+      "admin": "0",
+      "verified": "1"
+    },
+    {
+      "id": 26,
+      "name": "Mason Martinez",
+      "citizenshipNumber": "1472583690",
+      "email": "masonmartinez18@gmail.com",
+      "password": "masonmartinez18@gmail.com",
+      "admin": "0",
+      "verified": "0"
+    },
+    {
+      "id": 27,
+      "name": "Evelyn Robinson",
+      "citizenshipNumber": "3692581470",
+      "email": "evelynrobinson19@gmail.com",
+      "password": "evelynrobinson19@gmail.com",
+      "admin": "0",
+      "verified": "1"
+    }
+  ]

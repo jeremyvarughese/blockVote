@@ -11,6 +11,7 @@ const schema = yup.object({
 interface Candidate {
   name: string;
   info: string;
+  pollId: number;
 }
 
 const Start = () => {
@@ -104,13 +105,13 @@ const Start = () => {
 
             {candidates.length !== 0 ? (
               <div className="candidates-container">
-                {candidates.map(({ name, info }, index) => (
+                {candidates.map(({ name, info, pollId}, index) => (
                   <div key={index} className="candidate-wrapper">
                     <span>{name}</span>
                     <span
                       onClick={() => {
                         const newList = [...candidates];
-                        const i = newList.indexOf({ name, info });
+                        const i = newList.indexOf({ name, info, pollId });
                         newList.splice(i, 1);
 
                         setCandidates(newList);
@@ -139,7 +140,8 @@ const Start = () => {
                   className=""
                   type="button"
                   onClick={() => {
-                    const newCandidate = { name, info };
+                    let pollId = Math.random();
+                    const newCandidate = { name, info, pollId };
                     setCandidates([...candidates, newCandidate]);
                     if (candidateField.current)
                       candidateField.current.value = "";

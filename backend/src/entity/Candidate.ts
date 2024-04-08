@@ -15,8 +15,8 @@ export class Candidate extends BaseEntity {
   @Column()
   name!: string;
 
-  @ManyToOne(() => Poll, (poll) => poll.candidates)
-  poll!: Poll;
+ // @ManyToOne(() => Poll, (poll) => poll.id)
+  poll!: number;
 
   @Column()
   info!: string

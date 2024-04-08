@@ -15,6 +15,6 @@ export class Poll extends BaseEntity {
   @Column()
   name!: string;
 
-  @OneToMany(() => Candidate, (candidate) => candidate.poll)
+ // @OneToMany(() => Candidate, (candidate) => candidate.poll)
   candidates!: Candidate[];
 }

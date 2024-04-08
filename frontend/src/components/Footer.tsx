@@ -6,7 +6,7 @@ const Footer = () => {
       style={{ paddingBottom: 20, paddingTop: 50, textAlign: "center" }}
       className="text-normal"
     >
-      <div>Blockchain Based Voting System</div>
+      <div>BlockVote</div>
     </footer>
   );
 };
