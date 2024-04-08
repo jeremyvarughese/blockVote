@@ -28,7 +28,10 @@ const Result = () => {
 
   return (
     <div>
-      <div>{voteState === "finished" ? <Finished/> : <p></p>}</div>
+      <div>{voteState === "finished" ? 
+      
+      
+      <Finished/> : <p></p>}</div>
         <div>
         {voteState === "running" ? <Running/> : <p></p>}
 

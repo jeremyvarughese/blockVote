@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const Finished = () => {
   return (
     <div className="vote-status-wrapper">

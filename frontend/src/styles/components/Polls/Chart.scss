@@ -1,8 +1,50 @@
+@keyframes shrink {
+  0% {
+    opacity: 1;
+    font-size: 1em;
+  }
+
+  50% {
+    opacity: 0.2;
+    font-size: 3em;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.chart{
+
+
+.win-text {
+font-size: 2em;
+background-color: aqua;
+animation: shrink 3s linear infinite;
+animation: blink 3s linear infinite;
+color: green;
+
+}
+
+
 .bars-container {
   min-width: 800px;
   display: flex;
   justify-content: center;
-
   .bar-wrapper {
     width: 100px;
     margin-left: 50px;
@@ -47,4 +89,6 @@
     border-radius: 20px;
     font-size: large;
   }
+}
+
 }

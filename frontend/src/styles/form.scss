@@ -3,8 +3,9 @@
   min-width: 400px;
   box-sizing: border-box;
   padding: 50px;
-  background-color:rgb(35, 54, 64);
+  background-color:$theme-secondary;
   border-radius: 20px;
+  opacity: 2;
 
   p {
     size: 2em;
@@ -45,13 +46,13 @@
 
   .form-info-text {
     text-align: center;
-    color: $theme-primary;
+    color:azure;
     margin: 30px;
   }
 }
 
 .form-error-text {
-  color: $theme-secondary;
+  color: azure;
   text-transform: lowercase;
   font-weight: 400;
   font-size: 0.9rem;

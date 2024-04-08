@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import * as yup from "yup";
 import ElectionContract, { web3 } from "../../web3";
+import { Candidate } from "../../entity/Candidate";
 
 const schema = yup.object({
   body: yup.object({
@@ -15,6 +16,9 @@ const schema = yup.object({
   }),
 });
 
+const newCandidate = new Candidate();
+
+
 export default async (req: Request, res: Response) => {
   try {
     await schema.validate(req);
@@ -22,7 +26,10 @@ export default async (req: Request, res: Response) => {
     return res.status(400).send(error.errors);
   }
 
-  const instance = await ElectionContract.deployed();
+   newCandidate.name = req.body.name;
+   newCandidate.info = req.body.candidate;
+  
+   const instance = await ElectionContract.deployed();
 
   const status = await instance.getStatus();
   if (status !== "not-started")
@@ -36,9 +43,17 @@ export default async (req: Request, res: Response) => {
 
   for (let i = 0; i < req.body.candidates.length; i++) {
     const candidate = req.body.candidates[i];
+
+    try {
+      await Candidate.save(candidate);
+    } catch (error) {
+      return res.status(400).send(error);
+    }
+
     await instance.addCandidate(candidate.name, candidate.info, {
       from: accounts[0],
     });
+
   }
 
   return res.send(req.body);

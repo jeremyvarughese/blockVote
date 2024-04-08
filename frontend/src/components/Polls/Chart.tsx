@@ -1,5 +1,7 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import axios from "../../axios";
+import { stat } from "fs";
+
 
 interface ChartProps {
   votes: any;
@@ -8,7 +10,10 @@ interface ChartProps {
   userName?: string;
 }
 
+
+
 const Chart = (props: ChartProps) => {
+  
   const votes = props.votes;
 
   const getButtons = () => {
@@ -61,23 +66,54 @@ const Chart = (props: ChartProps) => {
 
     for (const name in votes) {
       total += parseInt(votes[name]);
+      
     }
 
     return total;
   };
 
+
   const getWinner = () => {
-    let win = 0;
-    
+    let highestVotes = 0;
+    let winners: string[] = [];
     for (const name in votes) {
-      let win = 0;
-      let total = getTotal();
-      if(total > win) {
-        win = total
+      const voteCount = parseInt(votes[name]);
+
+      if(voteCount > highestVotes  && name!="NOTA") {
+        highestVotes = voteCount;
+        winners = [name];
+      } else if (voteCount === highestVotes) {
+        winners.push(name);
       }
     }
-    return win;
-  }
+
+    if(winners.length === 1) {
+      return winners[0];
+    } else if(winners.length > 1) {
+      return "Draw";
+    } else {
+      return "No winner!";
+    }
+  };
+     
+
+  // const getWinner = () => {
+  //   let winner = "";
+  //   let win = 0;
+  //   for (const name in votes) {
+      
+  //     if(votes[name] > win && votes[name]!="NOTA") {
+  //       winner=name;
+  //       win = parseInt(votes[name]);
+  //     }
+
+  //     else {
+
+  //     }
+
+  //   }
+  //   return winner;
+  // }
 
   const getBars = () => {
     const bars = [];
@@ -111,8 +147,29 @@ const Chart = (props: ChartProps) => {
     return bars;
   };
 
+  const [loading, setLoading] = useState<boolean>(true);
+  const [status, setStatus] = useState<"not-started" | "running" | "finished">(
+    "not-started"
+  );
+
+  useEffect(() => {
+    setLoading(true);
+    axios
+      .get("/polls/status")
+      .then((res) => {
+        setStatus(res.data.status);
+        setLoading(false);
+      })
+      .catch((error) => console.log({ error }));
+  }, []);
+
+
   return (
-    <div>
+    <div className="chart">
+      <div>Total votes: {getTotal()}</div>
+      <div>{status === "finished" ?
+      <span className="win-text">{getWinner() === "Draw"? getWinner() : <p>{getWinner()} wins!</p>}</span> : <div></div>}
+      </div>
       <div className="bars-container">{getBars()}</div>
       <div className="names-wrapper">{getNames()}</div>
 
