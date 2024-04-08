@@ -11,7 +11,6 @@ const schema = yup.object({
 interface Candidate {
   name: string;
   info: string;
-  pollId: number;
 }
 
 const Start = () => {
@@ -23,6 +22,12 @@ const Start = () => {
 
   const candidateField = useRef<HTMLInputElement>(null);
   const candidateInfoField = useRef<HTMLInputElement>(null);
+
+  function isAlphaNumeric(str: string) {
+    // Regular expression to match only alphanumeric characters
+    const regex = /^[a-zA-Z]+$/;
+    return regex.test(str);
+  }
 
   return (
     <div className="form-container">
@@ -49,10 +54,19 @@ const Start = () => {
               break;
             }
 
-            if (candidate.info.length < 10) {
-              candidatesError = "invalid info for " + candidate.name;
+            if (isAlphaNumeric(candidate.name) == false) {
+              candidatesError = "invalid name(use only alphabets)" + candidate.name;
+            }
+
+            if (candidate.info.length < 5) {
+              candidatesError = "invalid info(less than 5 characters) for " + candidate.name;
               break;
             }
+
+            if (isAlphaNumeric(candidate.info) == false) {
+              candidatesError = "Invalid info(use only alphabets)" + candidate.name;
+
+            } 
           }
 
           setError(candidatesError);
@@ -105,13 +119,13 @@ const Start = () => {
 
             {candidates.length !== 0 ? (
               <div className="candidates-container">
-                {candidates.map(({ name, info, pollId}, index) => (
+                {candidates.map(({ name, info }, index) => (
                   <div key={index} className="candidate-wrapper">
                     <span>{name}</span>
                     <span
                       onClick={() => {
                         const newList = [...candidates];
-                        const i = newList.indexOf({ name, info, pollId });
+                        const i = newList.indexOf({ name, info });
                         newList.splice(i, 1);
 
                         setCandidates(newList);
@@ -140,8 +154,7 @@ const Start = () => {
                   className=""
                   type="button"
                   onClick={() => {
-                    let pollId = Math.random();
-                    const newCandidate = { name, info, pollId };
+                    const newCandidate = { name, info };
                     setCandidates([...candidates, newCandidate]);
                     if (candidateField.current)
                       candidateField.current.value = "";
